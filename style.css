@@ -1,0 +1,19 @@
+#container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.block {
+    display: inline-block;
+    width: 100%;
+}
+
+.text {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.link {
+    text-decoration: red underline;
+    border: 1px solid red;
+    padding: 20px;
+}
