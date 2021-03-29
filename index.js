@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(function(resp) { return resp.json() })
         .then(function(data) {
             addImages(data)
-            console.log(data)
         })
+        
         .catch(function() {
 
         })
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (d.contents[i].class === "Link") {
                 var link = document.createElement('a')
                 link.setAttribute('href', d.contents[i].source.url)
-                link.textContent = d.contents[i].generated_title
+                link.textContent = '🔗 ' + d.contents[i].generated_title
                 link.setAttribute('class', 'link block')
                 blocks.push(link)
             } else if(d.contents[i].class === "Attachment") {
@@ -43,7 +43,24 @@ document.addEventListener("DOMContentLoaded", function() {
                 blocks.push(attachmentLink)
             } 
             else if (d.contents[i].class === "Media") {
-                console.log('media')
+                var embedSrc = d.contents[i].embed.html
+                var parsedEmbed = new DOMParser().parseFromString(embedSrc, "text/html")
+
+                var mediaEmbed = []
+                mediaEmbed.push(parsedEmbed)
+
+                var mediaSrc = mediaEmbed[0].all[3].attributes[1].nodeValue
+
+                function prepareIframe() {
+                    var finalIframe = document.createElement("iframe");
+                    finalIframe.setAttribute("src", mediaSrc)
+                    finalIframe.setAttribute("class", "media-iframe")
+                    blocks.push(finalIframe)
+                }
+
+                prepareIframe()
+                
+
             }
         }
 
