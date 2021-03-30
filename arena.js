@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     function getBlocks() {
-        fetch('https://api.are.na/v2/channels/defining-place/contents?page=1&amp;per=50;sort=position&direction=desc')
+        fetch('https://api.are.na/v2/channels/website-upload/contents?page=1&amp;per=50;sort=position&direction=desc')
         .then(function(resp) { return resp.json() })
         .then(function(data) {
             addImages(data)
