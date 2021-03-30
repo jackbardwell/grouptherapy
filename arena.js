@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 function prepareIframe() {
                     var finalIframe = document.createElement("iframe");
                     finalIframe.setAttribute("src", mediaSrc)
-                    finalIframe.setAttribute("class", "media-iframe")
+                    finalIframe.setAttribute("class", "media-iframe block")
                     blocks.push(finalIframe)
                 }
 
