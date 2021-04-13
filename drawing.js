@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         function draw(event) {
             ctx.beginPath()
-            ctx.lineWidth = 10
+            ctx.lineWidth = 4
             ctx.lineCap = 'round'
             ctx.strokeStyle = 'blue'
             ctx.moveTo(coord.x, coord.y)
