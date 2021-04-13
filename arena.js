@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 var linkDate = Date.parse(linkDateRaw);
 
                 linkObject.DOM = linkTag;
+                console.log(linkTag)
                 linkObject.date = linkDate;
                 
                 blocks.push(linkObject);
@@ -120,12 +121,14 @@ document.addEventListener("DOMContentLoaded", function() {
             diff = blocks[n-1].date - blocks[n].date;
            
             if(diff < 100000) {
-                padding = diff / 1000
+                padding = diff / 100
             } else if(diff < 1000000) {
-                padding = diff / 10000
+                padding = diff / 1000
             } else if(diff < 10000000) {
-                padding =  diff / 100000
+                padding =  diff / 10000
             } else if(diff < 100000000) {
+                padding = diff / 1000000
+            } else if(diff < 1000000000) {
                 padding = diff / 10000000
             } else {
                 padding = diff / 1000000
@@ -140,14 +143,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
             var htmlEl = object.DOM;
 
-            // if(htmlEl.classList.contains("attachment")){
-            //     var imageChange = htmlEl.getElementsByTagName('img')
-            //     imageChange.setAttribute(`style`, `margin-top: ${object.difference}px`)
-            // } else
+            if(htmlEl.classList.contains("attachment")){
+                var attachmentImages = htmlEl.getElementsByTagName('img')
+
+                for(var a = 0; a < attachmentImages.length; a++) {
+                    attachmentImages[a].setAttribute('style', `margin-top: ${object.difference}px`)
+                    container.appendChild(htmlEl)
+                }
+                
+            }
 
             htmlEl.setAttribute(`style`, `margin-top: ${object.difference}px`)
 
-            container.appendChild(htmlEl)  
+            function setColumn(){
+                const columnOptions = [4, 6, 8, 10]
+                var columnN = Math.floor(Math.random() * 4);
+                htmlEl.setAttribute(`style`, `grid-column: span ${columnOptions[columnN]}` )
+            }
+            
+            setColumn();
+
+            container.appendChild(htmlEl);
+              
         });
 
     }

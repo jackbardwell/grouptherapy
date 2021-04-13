@@ -8,10 +8,6 @@ body {
     height: 100%;
 }
 
-/* img { 
-    width: 100%;
-    max-height: 100%;
-} */
 
 h1 {
     margin: 0;
@@ -69,14 +65,24 @@ a:visited {
     margin-left: 10px;
 }
 
-
 #container {
     max-width: 100vw;
     padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: min-content;
+    column-gap: 15px;
+    row-gap: 30px;
 }
 
 .block {
-    width: 50vw;
+    grid-column: span 4;
+    height: auto;
+    
+}
+
+img {
+    width: 100%;
 }
 
 .text {
@@ -85,6 +91,10 @@ a:visited {
     background-color: #000;
     color: #fff;
     text-align: center;
+    height: 400px;
+    width: 400px;
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .link {
