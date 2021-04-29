@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             canvas.style.display = 'none'
             drawButton.innerHTML = 'Draw'
-            drawButton.style.backgroundColor = 'yellow'
+            drawButton.style.backgroundColor = 'white'
             drawButton.style.color = 'black'
         }
 

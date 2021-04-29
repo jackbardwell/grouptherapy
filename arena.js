@@ -117,25 +117,25 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
-        for(var n = 1; n < blocks.length ; n++) {
-            diff = blocks[n-1].date - blocks[n].date;
+        // for(var n = 1; n < blocks.length ; n++) {
+        //     diff = blocks[n-1].date - blocks[n].date;
            
-            if(diff < 100000) {
-                padding = diff / 100
-            } else if(diff < 1000000) {
-                padding = diff / 1000
-            } else if(diff < 10000000) {
-                padding =  diff / 10000
-            } else if(diff < 100000000) {
-                padding = diff / 1000000
-            } else if(diff < 1000000000) {
-                padding = diff / 10000000
-            } else {
-                padding = diff / 1000000
-            }
+        //     if(diff < 100000) {
+        //         padding = diff / 100
+        //     } else if(diff < 1000000) {
+        //         padding = diff / 1000
+        //     } else if(diff < 10000000) {
+        //         padding =  diff / 10000
+        //     } else if(diff < 100000000) {
+        //         padding = diff / 1000000
+        //     } else if(diff < 1000000000) {
+        //         padding = diff / 10000000
+        //     } else {
+        //         padding = diff / 1000000
+        //     }
             
-            blocks[n].difference = padding;
-        }
+        //     blocks[n].difference = padding;
+        // }
 
         var container = document.getElementById("container");
 
@@ -143,25 +143,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
             var htmlEl = object.DOM;
 
+
+            function setSize() {
+                const blockSizes = ['s-tiny', 's-small', 's-medium', 's-large']
+                const mlSize = ['ml-none', 'ml-small', 'ml-medium', 'ml-large']
+                var sizeN = Math.floor(Math.random() * 4);
+                var mlN = Math.floor(Math.random() * 3);
+                htmlEl.className += ' ' + blockSizes[sizeN];
+                htmlEl.className += ' ' + mlSize[mlN];
+            }
+
+            setSize();
+
             if(htmlEl.classList.contains("attachment")){
                 var attachmentImages = htmlEl.getElementsByTagName('img')
 
                 for(var a = 0; a < attachmentImages.length; a++) {
-                    attachmentImages[a].setAttribute('style', `margin-top: ${object.difference}px`)
                     container.appendChild(htmlEl)
                 }
                 
             }
 
-            htmlEl.setAttribute(`style`, `margin-top: ${object.difference}px`)
-
-            function setColumn(){
-                const columnOptions = [4, 6, 8, 10]
-                var columnN = Math.floor(Math.random() * 4);
-                htmlEl.setAttribute(`style`, `grid-column: span ${columnOptions[columnN]}` )
-            }
-            
-            setColumn();
 
             container.appendChild(htmlEl);
               
