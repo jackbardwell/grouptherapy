@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
         fetch('https://api.are.na/v2/channels/website-upload/contents?page=1&amp;per=50;sort=position&direction=desc')
         .then(function(resp) { return resp.json() })
         .then(function(data) {
-            console.log(data);
             addImages(data);
         })
         
@@ -28,8 +27,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 var imgDateRaw = d.contents[i].connected_at;
                 var imgDate = Date.parse(imgDateRaw);
 
+                var imgTxt = document.createElement('p');
+                imgTxt.innerHTML = d.contents[i].title;
+                var imgDiv = document.createElement('div');
+
                 imgBlock.DOM = img;
                 imgBlock.date = imgDate;
+
+                imgDiv.innerHTML = imgBlock;
+
+                console.log(imgDiv)
 
                 blocks.push(imgBlock);
 
@@ -63,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 var linkDate = Date.parse(linkDateRaw);
 
                 linkObject.DOM = linkTag;
-                console.log(linkTag)
                 linkObject.date = linkDate;
                 
                 blocks.push(linkObject);
