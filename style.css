@@ -43,6 +43,8 @@ a:visited {
     padding: 15px;
     border-radius: 500px;
     border: 1px solid black;
+    font-weight: normal;
+    font-size: 20px;
 }
 
 .other-links {
