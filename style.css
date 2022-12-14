@@ -72,7 +72,7 @@ span {
 .other-links li {
     display: inline-block;
     background-color: white;
-    border-radius: 500px;
+    border-radius: 0px;
     padding: 15px;
     color: black;
     font-size: 20px;
