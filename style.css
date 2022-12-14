@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
     max-height: auto;
     height: 100%;
 }
@@ -50,7 +51,8 @@ span {
     background-color: white;
     padding: 15px;
     border-radius: 0px;
-    border: 1px solid black;
+    border: 1px;
+    border-color: #1b53ee;
     font-weight: bold;
     font-size: 25px;
     color: #1b53ee;
@@ -75,7 +77,8 @@ span {
     font-size: 25px;
     cursor: pointer;
     margin-left: 10px;
-    border: 1px #1b53ee;
+    border: 1px;
+    border-color: #1b53ee;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
