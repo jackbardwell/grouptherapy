@@ -93,7 +93,7 @@ span {
 #info-container {
     width: 70vw;
     height: 80vh;
-    background-color: #fff;
+    background-color: #eaeaea;
     position: fixed;
     border: 1px solid black;
     left: 50%;
@@ -107,6 +107,7 @@ span {
 
 #info-container p {
     font-size: 32px;
+    color: #1b53ee;
     margin: 0;
 }
 
