@@ -3,7 +3,11 @@
 body {
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
     font-family: 'Arial Narrow', Arial, sans-serif;
+=======
+    font-family: 'Times New Roman', Times, serif;
+>>>>>>> parent of 527ff5b (Therapy Style Updates 01)
     max-height: auto;
     height: 100%;
 }
@@ -29,7 +33,7 @@ a:visited {
 span {
   font-size: 25px;
   font-weight: bold;
-  font-family: Wingdings;
+  font: Wingdings;
   color: #1b53ee;
 }
 
@@ -51,9 +55,8 @@ span {
     padding: 15px;
     border-radius: 500px;
     border: 1px solid black;
-    font-weight: bold;
-    font-size: 25px;
-    color: #1b53ee;
+    font-weight: normal;
+    font-size: 20px;
 }
 
 .other-links {
@@ -71,11 +74,10 @@ span {
     background-color: white;
     border-radius: 500px;
     padding: 15px;
-    color: #1b53ee;
-    font-size: 25px;
+    color: black;
+    font-size: 20px;
     cursor: pointer;
     margin-left: 10px;
-    font-weight: bold;
     border: 1px solid black;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -165,7 +167,7 @@ img {
 .text {
     padding: 100px 20px;
     background-color: #000;
-    color: #1b53ee;
+    color: #fff;
     text-align: center;
     height: 400px;
     width: 400px;
@@ -176,7 +178,7 @@ img {
 .link {
     font-size:1rem; 
     padding: 20px;
-    color: #1b53ee
+    color: black
 }
 
 .media-iframe {
@@ -200,7 +202,6 @@ img {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    font-weight: bold;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
