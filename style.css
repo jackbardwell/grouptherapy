@@ -3,11 +3,7 @@
 body {
     margin: 0;
     padding: 0;
-<<<<<<< HEAD
     font-family: 'Arial Narrow', Arial, sans-serif;
-=======
-    font-family: 'Times New Roman', Times, serif;
->>>>>>> parent of 527ff5b (Therapy Style Updates 01)
     max-height: auto;
     height: 100%;
 }
@@ -74,8 +70,8 @@ span {
     background-color: white;
     border-radius: 0px;
     padding: 15px;
-    color: black;
-    font-size: 20px;
+    color: #1b53ee;
+    font-size: 25px;
     cursor: pointer;
     margin-left: 10px;
     border: 1px solid black;
